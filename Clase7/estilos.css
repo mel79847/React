@@ -1,0 +1,22 @@
+.parrafo
+{
+    color: red;
+    font-size: 20px;
+}
+
+.verde
+{
+    background-color: green;
+}
+
+form label {
+    color: blue;
+}
+
+.formulario label {
+    color: blue;
+}
+
+input[required] {
+    background-color: gray;
+}
