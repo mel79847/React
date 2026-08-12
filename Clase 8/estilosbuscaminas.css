@@ -1,0 +1,21 @@
+.tablero {
+    border-collapse: collapse;
+}
+
+.tablero td {
+    width: 2rem;
+    height: 2rem;
+
+    border: 2px solid gray;
+
+    text-align: center;
+
+    color: transparent;
+
+    background-color: #128163;
+}
+
+.tablero td:hover {
+    color: black;
+    background-color: #d6d6d6;
+}
