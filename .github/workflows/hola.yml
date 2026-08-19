@@ -12,3 +12,6 @@ jobs:
         steps: 
             - name: saludar
               run: echo "Hola mundo!"
+            - name: descargar codigo
+              uses: actions/checkout@v3
+              
