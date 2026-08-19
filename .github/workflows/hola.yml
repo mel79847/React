@@ -5,7 +5,7 @@ on:
 
 jobs:
     hola:
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps: 
             - name: saludar
               run: echo "Hola mundo!"
