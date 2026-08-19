@@ -19,10 +19,16 @@ jobs:
             - name: listar archivos
               run: ls -la
             - name: instalar node
-              uses: actions/setup-node@v4
-            - name: mostrar version de node
-              run: node --version
-            - name: instalar dependencias
-              run: npm install
-            - name: verificar version de npm
+              uses: actions/setup-node@v3
+
+            -  name: node version
+               run: node --version
+
+            - name: verify npm
               run: npm --version
+
+            - name: start project with package json
+              run: npm init -y
+
+            - name: install eslint
+              run: npm install --save-dev eslint@eslint/js globals
