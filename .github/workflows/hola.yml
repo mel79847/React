@@ -19,4 +19,10 @@ jobs:
             - name: listar archivos
               run: ls -la
             - name: instalar node
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
+            - name: mostrar version de node
+              run: node --version
+            - name: instalar dependencias
+              run: npm install
+            - name: verificar version de npm
+              run: npm --version
