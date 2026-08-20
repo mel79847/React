@@ -31,4 +31,4 @@ jobs:
               run: npm init -y
 
             - name: install eslint
-              run: npm install --save-dev eslint@eslint/js globals
+              run: npm install --save-dev eslint @eslint/js globals
