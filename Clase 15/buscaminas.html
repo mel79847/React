@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<link href="estilosbuscaminas.css" rel="stylesheet">
+
+<body>
+
+    <h2>Buscaminas, Clase 15</h2>
+    <div id="tablero">
+
+        <button onclick="jugar(0)"></button>
+        <button onclick="jugar(1)"></button>
+        <button onclick="jugar(2)"></button>
+        <button onclick="jugar(3)"></button>
+
+        <button onclick="jugar(4)"></button>
+        <button onclick="jugar(5)"></button>
+        <button onclick="jugar(6)"></button>
+        <button onclick="jugar(7)"></button>
+
+        <button onclick="jugar(8)"></button>
+        <button onclick="jugar(9)"></button>
+        <button onclick="jugar(10)"></button>
+        <button onclick="jugar(11)"></button>
+
+        <button onclick="jugar(12)"></button>
+        <button onclick="jugar(13)"></button>
+        <button onclick="jugar(14)"></button>
+        <button onclick="jugar(15)"></button>
+
+    </div>
+    <script>
+
+        let bombas = [2, 6, 11, 13];
+        let botones = document.querySelectorAll("button");
+
+        function jugar(posicion) {
+
+            if (bombas.includes(posicion)) {
+
+                botones[posicion].innerHTML = "💣";
+                setTimeout(function () {
+                    explotar(posicion);
+                }, 300);
+            } else {
+
+                botones[posicion].innerHTML = "😊";
+                setTimeout(function () {
+                    botones[posicion].innerHTML = "";
+                }, 1000);
+            }
+        }
+
+        function explotar(posicion) {
+
+            let fila = Math.floor(posicion / 4);
+            let columna = posicion % 4;
+
+            for (let f = fila - 1; f <= fila + 1; f++) {
+                for (let c = columna - 1; c <= columna + 1; c++) {
+                    if (f >= 0 && f < 4 && c >= 0 && c < 4) {
+
+                        let lugar = f * 4 + c;
+                        botones[lugar].innerHTML = "💥";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
