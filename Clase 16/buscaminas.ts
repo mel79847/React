@@ -2,12 +2,14 @@ console.log("Esto es un buscaminas");
 
 let listaElementos = document.querySelectorAll("td");
 
+let numero: number = "hola";
+
 for (const elemento of listaElementos) {
 
     elemento.addEventListener("click", () => {
 
         console.log("Se hizo click");
-        
+
         if (elemento.classList.contains("mina")) {
             console.log("Es una bomba");
             for (const celda of listaElementos) {
