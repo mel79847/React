@@ -1,0 +1,24 @@
+name: Validar TypeScript
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  validar-ts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Validar TypeScript
+        run: npm run check:ts

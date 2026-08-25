@@ -2,7 +2,11 @@
 <html lang="es">
 
 <link href="estilosbuscaminas.css" rel="stylesheet">
-
+<style>
+    td {
+        visibility: hidden;
+    }
+</style>
 <body>
 
     <h2>Buscaminas, Clase 15</h2>
@@ -59,7 +63,6 @@
             for (let f = fila - 1; f <= fila + 1; f++) {
                 for (let c = columna - 1; c <= columna + 1; c++) {
                     if (f >= 0 && f < 4 && c >= 0 && c < 4) {
-
                         let lugar = f * 4 + c;
                         botones[lugar].innerHTML = "💥";
                     }
