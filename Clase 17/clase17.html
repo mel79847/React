@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 17</title>
+</head>
+
+<body>
+
+    <section id="root"></section>
+    <script type="module">
+
+        import React from 'https://esm.sh/react@19.2.8';
+        import { createRoot } from 'https://esm.sh/react-dom@19.2.8/client';
+
+        function TresEnRaya() {
+            return React.createElement(
+                'section',
+                { className: 'juego' },
+                React.createElement('h1', null, 'Tres en Raya'),
+                React.createElement('p', null, 'Este es un juego de Tres en Raya hecho con React.'),
+                React.createElement('button', { onClick: () => alert('¡Botón presionado!') }, 'Presiona aquí')
+            );
+        }
+
+        const contenedor = document.querySelector('#root');
+        const root = createRoot(contenedor);
+
+        root.render(
+            React.createElement(TresEnRaya)
+        );
+
+        console.log(React);
+        console.log(createRoot);
+
+    </script>
+</body>
+</html>
