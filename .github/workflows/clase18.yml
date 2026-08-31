@@ -25,10 +25,11 @@ jobs:
 
       - name: Vite build
         working-directory: "Clase 17/tres-en-raya"
-        run: npx vite build
+        run: npm run build
 
-      - name: Guardar resultado dist
+      - name: Guardar ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: dist
+          name: aplicacion-web
           path: "Clase 17/tres-en-raya/dist"
+          
